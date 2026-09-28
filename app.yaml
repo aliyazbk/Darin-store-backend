@@ -1,6 +1,7 @@
 kind: wasmer.io/App.v0
 owner: aliyazbk
 name: darin-store-backend
+package: .
 
 annotations:
   anybuild.run/config:
