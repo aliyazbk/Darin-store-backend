@@ -22,16 +22,16 @@ class StoreSetting extends Model
     ];
 
     public function getLogoUrlAttribute(): ?string
-    {
-        return $this->logo_path
-            ? Storage::disk('public')->url($this->logo_path)
-            : null;
-    }
+{
+    return $this->logo_path
+        ? url('media/' . ltrim($this->logo_path, '/'))
+        : null;
+}
 
-    public function getHeroVideoUrlAttribute(): ?string
-    {
-        return $this->hero_video_path
-            ? Storage::disk('public')->url($this->hero_video_path)
-            : null;
-    }
+public function getHeroVideoUrlAttribute(): ?string
+{
+    return $this->hero_video_path
+        ? url('media/' . ltrim($this->hero_video_path, '/'))
+        : null;
+}
 }
