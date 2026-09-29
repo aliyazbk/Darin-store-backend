@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/storage/{path}', function (string $path) {
+Route::get('/media/{path}', function (string $path) {
     $disk = Storage::disk('public');
 
     abort_unless($disk->exists($path), 404);
