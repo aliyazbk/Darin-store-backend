@@ -1,3 +1,7 @@
+kind: wasmer.io/App.v0
+owner: aliyazbk
+name: darin-store-backend-v2
+
 volumes:
   - name: uploads
     mount: /app/storage/app/public
